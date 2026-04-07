@@ -8,7 +8,6 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - API
   - Supply Chain
 url: >-
   https://raw.githubusercontent.com/api-evangelist/resilinc/refs/heads/main/apis.yml
@@ -24,8 +23,7 @@ apis:
       help your developers access the raw dataset, which can either be used for
       offline analysis or supply chain API integration with their IT systems.
     humanURL: https://www.resilinc.com/solutions/developer-api/
-    tags:
-      - API
+    tags: []
     properties:
       - type: Documentation
         url: https://www.resilinc.com/solutions/developer-api/
