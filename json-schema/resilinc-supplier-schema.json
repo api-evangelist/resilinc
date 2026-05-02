@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/api-evangelist/resilinc/json-schema/resilinc-supplier-schema.json",
+  "title": "Resilinc Supplier",
+  "description": "JSON Schema for a Resilinc supplier record in the supply chain risk management platform. Represents a supplier organization tracked for risk monitoring and disruption analysis.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique supplier identifier."
+    },
+    "name": {
+      "type": "string",
+      "description": "Supplier organization name."
+    },
+    "country": {
+      "type": "string",
+      "description": "Country where the supplier is located."
+    },
+    "region": {
+      "type": "string",
+      "description": "Geographic region."
+    },
+    "city": {
+      "type": "string",
+      "description": "City where the supplier operates."
+    },
+    "industry": {
+      "type": "string",
+      "description": "Industry sector of the supplier."
+    },
+    "tier": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Supply chain tier level (1 = direct supplier, 2+ = sub-tier)."
+    },
+    "risk_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Composite risk score (0-100, higher = more risk)."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "inactive", "under_review", "critical"],
+      "description": "Current supplier status."
+    },
+    "parts": {
+      "type": "array",
+      "description": "Parts or components sourced from this supplier.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "part_number": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "sites": {
+      "type": "array",
+      "description": "Manufacturing or operational sites.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "address": { "type": "string" },
+          "country": { "type": "string" },
+          "lat": { "type": "number" },
+          "lon": { "type": "number" }
+        }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Record creation timestamp."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Record last updated timestamp."
+    }
+  },
+  "required": ["id", "name", "country"]
+}

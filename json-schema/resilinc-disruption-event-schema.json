@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/api-evangelist/resilinc/json-schema/resilinc-disruption-event-schema.json",
+  "title": "Resilinc Disruption Event",
+  "description": "JSON Schema for a Resilinc supply chain disruption event, representing a real-world event (natural disaster, geopolitical, factory fire, etc.) that may impact supply chain operations.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique event identifier."
+    },
+    "title": {
+      "type": "string",
+      "description": "Event title or headline."
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the disruption event."
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "natural_disaster",
+        "geopolitical",
+        "factory_fire",
+        "labor_strike",
+        "port_disruption",
+        "logistics",
+        "cyber_attack",
+        "regulatory",
+        "pandemic",
+        "financial",
+        "other"
+      ],
+      "description": "Category of the disruption event."
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Severity level of the event."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "monitoring", "resolved"],
+      "description": "Current status of the event."
+    },
+    "location": {
+      "type": "object",
+      "description": "Geographic location of the event.",
+      "properties": {
+        "country": { "type": "string" },
+        "region": { "type": "string" },
+        "city": { "type": "string" },
+        "lat": { "type": "number" },
+        "lon": { "type": "number" }
+      }
+    },
+    "affected_suppliers": {
+      "type": "array",
+      "description": "Suppliers potentially impacted by this event.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "supplier_id": { "type": "string" },
+          "supplier_name": { "type": "string" },
+          "impact_level": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "critical"]
+          }
+        }
+      }
+    },
+    "affected_parts": {
+      "type": "array",
+      "description": "Parts or components potentially impacted.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "part_id": { "type": "string" },
+          "part_number": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the event was published."
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the event started."
+    },
+    "resolved_at": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Timestamp when the event was resolved (null if ongoing)."
+    },
+    "source_urls": {
+      "type": "array",
+      "description": "External source URLs for the event.",
+      "items": { "type": "string", "format": "uri" }
+    }
+  },
+  "required": ["id", "title", "event_type", "severity", "status", "published_at"]
+}

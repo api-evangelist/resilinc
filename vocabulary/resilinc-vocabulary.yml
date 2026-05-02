@@ -1,0 +1,148 @@
+vocabulary:
+  name: Resilinc Vocabulary
+  description: Domain vocabulary for the Resilinc supply chain risk management platform and API.
+  version: "1.0"
+  created: "2026-05-02"
+  terms:
+    - term: SupplyChain
+      definition: >-
+        The network of organizations, suppliers, logistics partners, and
+        processes involved in producing and delivering a product or service.
+      related: ["supplier", "disruption", "riskManagement"]
+
+    - term: Supplier
+      definition: >-
+        A company or organization that provides parts, materials, or services
+        to another organization in the supply chain. Tracked with tier, location,
+        risk score, and operational sites in Resilinc.
+      properties:
+        - id
+        - name
+        - country
+        - tier
+        - risk_score
+        - status
+        - parts
+        - sites
+      related: ["supplyChain", "tier", "riskScore"]
+
+    - term: SupplierTier
+      definition: >-
+        The position of a supplier in the supply chain relative to the buyer.
+        Tier 1 are direct suppliers; Tier 2+ are sub-tier or indirect suppliers.
+      values:
+        - "1: Direct supplier"
+        - "2: Supplier's supplier"
+        - "3+: Sub-tier suppliers"
+      related: ["supplier"]
+
+    - term: RiskScore
+      definition: >-
+        A composite 0-100 numeric score representing the overall supply chain
+        risk associated with a supplier or location. Higher scores indicate
+        greater risk.
+      related: ["supplier", "riskAssessment"]
+
+    - term: DisruptionEvent
+      definition: >-
+        A real-world event (natural disaster, geopolitical incident, cyber
+        attack, etc.) that has potential to impact supply chain operations.
+        Resilinc monitors and publishes events with severity and impacted
+        supplier information.
+      properties:
+        - id
+        - title
+        - event_type
+        - severity
+        - status
+        - location
+        - affected_suppliers
+      related: ["supplier", "impactAssessment"]
+
+    - term: EventType
+      definition: The category classification of a supply chain disruption event.
+      values:
+        - natural_disaster
+        - geopolitical
+        - factory_fire
+        - labor_strike
+        - port_disruption
+        - logistics
+        - cyber_attack
+        - regulatory
+        - pandemic
+        - financial
+        - other
+      related: ["disruptionEvent"]
+
+    - term: Severity
+      definition: The relative impact level of a disruption event.
+      values:
+        - low
+        - medium
+        - high
+        - critical
+      related: ["disruptionEvent", "riskScore"]
+
+    - term: SIMS
+      definition: >-
+        Supplier Information Management System. Resilinc's platform for
+        real-time visibility into global supply chain disruptions and risk
+        mitigation planning.
+      related: ["supplyChain", "riskManagement"]
+
+    - term: ControlTower
+      definition: >-
+        A supply chain integration hub that connects ERP systems and partner
+        software, consolidating data access for decision-making. Resilinc
+        provides API integration for control tower use cases.
+      related: ["integration", "ERP"]
+
+    - term: MitigationPlan
+      definition: >-
+        A strategic response plan to address a supply chain disruption,
+        including alternative supplier sourcing, inventory adjustments, and
+        logistical workarounds.
+      related: ["disruptionEvent", "riskManagement"]
+
+    - term: ImpactAssessment
+      definition: >-
+        The analysis of how a disruption event affects specific suppliers,
+        parts, and finished goods in an organization's supply chain.
+      related: ["disruptionEvent", "supplier"]
+
+    - term: AgenticAI
+      definition: >-
+        Resilinc's AI capability that autonomously monitors supply chains,
+        detects disruptions, assesses impacts, and recommends mitigation
+        actions without requiring manual intervention.
+      related: ["AI", "automation", "riskManagement"]
+
+    - term: Site
+      definition: >-
+        A physical manufacturing, warehouse, or operational facility of a
+        supplier tracked by Resilinc with geographic coordinates.
+      properties:
+        - id
+        - name
+        - address
+        - country
+        - lat
+        - lon
+      related: ["supplier", "geoRisk"]
+
+    - term: Part
+      definition: >-
+        A component, material, or product sourced from a supplier and tracked
+        in the supply chain for disruption impact analysis.
+      properties:
+        - id
+        - part_number
+        - description
+      related: ["supplier", "impactAssessment"]
+
+    - term: RestAPI
+      definition: >-
+        Resilinc's REST API providing programmatic access to supply chain data
+        including risks, suppliers, events, and mitigation planning.
+      related: ["integration", "developer"]

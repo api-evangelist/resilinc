@@ -1,0 +1,45 @@
+{
+  "title": "Supply Chain Disruption Event",
+  "description": "Example Resilinc disruption event representing a natural disaster impacting supplier operations",
+  "event": {
+    "id": "evt-2024-00312",
+    "title": "Earthquake in Taiwan - Semiconductor Supply Impact",
+    "description": "A 7.4 magnitude earthquake struck eastern Taiwan on April 3, 2024, causing facility damage at multiple semiconductor fabs. TSMC, ASE Group, and other manufacturers reported facility checks and temporary production halts.",
+    "event_type": "natural_disaster",
+    "severity": "high",
+    "status": "monitoring",
+    "location": {
+      "country": "Taiwan",
+      "region": "Asia Pacific",
+      "city": "Hualien",
+      "lat": 23.97,
+      "lon": 121.60
+    },
+    "affected_suppliers": [
+      {
+        "supplier_id": "sup-tsmc-001",
+        "supplier_name": "TSMC",
+        "impact_level": "medium"
+      },
+      {
+        "supplier_id": "sup-ase-002",
+        "supplier_name": "ASE Group",
+        "impact_level": "high"
+      }
+    ],
+    "affected_parts": [
+      {
+        "part_id": "part-chip-advanced",
+        "part_number": "A17-PRO-SOC",
+        "description": "Advanced processor SoC - 3nm process"
+      }
+    ],
+    "published_at": "2024-04-03T08:15:00Z",
+    "started_at": "2024-04-03T07:58:00Z",
+    "resolved_at": null,
+    "source_urls": [
+      "https://news.example.com/taiwan-earthquake-2024",
+      "https://tsmc.com/press/2024-04-03"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Resilinc Supplier",
+  "description": "JSON structure for a Resilinc supply chain supplier record.",
+  "fields": [
+    { "name": "id", "type": "string", "description": "Unique supplier identifier." },
+    { "name": "name", "type": "string", "description": "Supplier organization name." },
+    { "name": "country", "type": "string", "description": "Country of operation." },
+    { "name": "region", "type": "string", "description": "Geographic region." },
+    { "name": "city", "type": "string", "description": "City of operation." },
+    { "name": "industry", "type": "string", "description": "Industry sector." },
+    { "name": "tier", "type": "integer", "description": "Supply chain tier (1=direct, 2+=sub-tier)." },
+    { "name": "risk_score", "type": "number", "description": "Composite risk score (0-100)." },
+    { "name": "status", "type": "string", "enum": ["active", "inactive", "under_review", "critical"], "description": "Supplier status." },
+    { "name": "parts", "type": "array<object>", "description": "Parts sourced from this supplier." },
+    { "name": "parts[].id", "type": "string", "description": "Part identifier." },
+    { "name": "parts[].part_number", "type": "string", "description": "Part number." },
+    { "name": "parts[].description", "type": "string", "description": "Part description." },
+    { "name": "sites", "type": "array<object>", "description": "Operational sites." },
+    { "name": "sites[].id", "type": "string", "description": "Site identifier." },
+    { "name": "sites[].name", "type": "string", "description": "Site name." },
+    { "name": "sites[].country", "type": "string", "description": "Site country." },
+    { "name": "sites[].lat", "type": "number", "description": "Site latitude." },
+    { "name": "sites[].lon", "type": "number", "description": "Site longitude." },
+    { "name": "created_at", "type": "date-time", "description": "Record creation timestamp." },
+    { "name": "updated_at", "type": "date-time", "description": "Record last updated timestamp." }
+  ]
+}
