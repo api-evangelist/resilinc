@@ -3,11 +3,11 @@
   "feeds": [
     {
       "source": "https://resilinc.ai/blog/",
-      "feed_url": "https://resilinc.ai/feed/",
-      "saved": 6,
-      "title": "Resilinc"
+      "feed_url": "https://resilinc.ai/blog/feed/",
+      "title": "Comments on: Blog",
+      "saved": 0
     }
   ],
   "post_count": 6,
-  "fetched": "2026-05-03T23:34:53Z"
+  "fetched": "2026-05-09T20:17:51Z"
 }
