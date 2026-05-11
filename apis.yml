@@ -82,6 +82,10 @@ common:
     url: https://resilinc.ai/blog/resilincs-agentic-ai-supply-chain-risk-platform-now-available-on-microsoft-azure-marketplace/
   - type: ParabolaIntegration
     url: https://parabola.io/parabolas-apis/parabolas-resilinc-api
+  - type: Integrations
+    url: https://resilinc.ai/partners/
+integrations:
+  - name: Partner With Us
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
