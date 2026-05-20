@@ -62,6 +62,10 @@ apis:
       - FN: Resilinc
         url: https://resilinc.ai/contact/
 common:
+  - type: GitHubOrganization
+    url: https://github.com/resilinc-corp
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/resilinc
   - type: Website
     url: https://resilinc.ai/
   - type: Documentation
