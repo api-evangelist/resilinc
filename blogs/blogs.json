@@ -2,12 +2,20 @@
   "repo": "resilinc",
   "feeds": [
     {
-      "source": "https://resilinc.ai/blog/",
+      "source": "https://resilinc.ai/blog/feed/",
       "feed_url": "https://resilinc.ai/blog/feed/",
-      "title": "Comments on: Blog",
-      "saved": 0
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://resilinc.ai/solutions/supply-chain-compliance/",
+      "feed_url": "https://resilinc.ai/feed/",
+      "title": "",
+      "saved": 1,
+      "method": "discovered"
     }
   ],
-  "post_count": 6,
-  "fetched": "2026-05-17T20:20:35Z"
+  "post_count": 7,
+  "fetched": "2026-06-01T23:35:02Z"
 }
