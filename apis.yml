@@ -88,7 +88,7 @@ common:
     url: https://parabola.io/parabolas-apis/parabolas-resilinc-api
   - type: Integrations
     url: https://resilinc.ai/partners/
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://resilinc.ai/llms.txt
 integrations:
   - name: Partner With Us
