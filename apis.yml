@@ -27,6 +27,12 @@ tags:
   - Risk Management
   - Supplier Intelligence
   - Disruption Monitoring
+  - Artificial Intelligence
+tags_raw:
+  - Supply Chain
+  - Risk Management
+  - Supplier Intelligence
+  - Disruption Monitoring
   - AI
 url: >-
   https://raw.githubusercontent.com/api-evangelist/resilinc/refs/heads/main/apis.yml
@@ -44,6 +50,13 @@ apis:
       real-time supply chain monitoring.
     humanURL: https://resilinc.ai/solutions/developer-api/
     tags:
+      - Supply Chain
+      - Risk Management
+      - Suppliers
+      - Event
+      - Disruptions
+      - Mitigation
+    tags_raw:
       - Supply Chain
       - Risk Management
       - Suppliers
