@@ -1,0 +1,30 @@
+# Front Door AI Index — resilinc — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: resilinc
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: resilinc.ai
+  final_host: resilinc.ai
+  ownership: own
+  owner: resilinc
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 75
+  host_score: 75
+  density: 53.34
+  words: 1406
+  tiers:
+    agentic: 30
+    core: 45
+    model: 0
+  ambiguous: 23
+  top_terms:
+    AI: 45
+    agentic: 20
+    agent: 18
+    AI agent: 10
+    intelligence: 4
+    predictive: 1
