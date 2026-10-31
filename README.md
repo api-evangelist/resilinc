@@ -66,42 +66,140 @@
 
 Resilinc is a cloud/SaaS-based supply chain risk management platform that provides REST APIs for accessing supply chain data, disruption events, supplier risk assessments, and mitigation planning. The platform offers real-time visibility into global supply chain disruptions, AI-powered risk analysis, and integrations with ERP systems, Snowflake, and Microsoft Azure. Resilinc serves enterprise customers with agentic AI capabilities for autonomous supply chain resilience.
 
-**URL:** [https://raw.githubusercontent.com/api-evangelist/resilinc/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/resilinc/refs/heads/main/apis.yml)
+**Areas:** Supply Chain · Risk Management · Supplier Intelligence · Disruption Monitoring · Artificial Intelligence
 
-## Tags
+## Resilinc on APIs.io
 
-Supply Chain, Risk Management, Supplier Intelligence, Disruption Monitoring, AI
+Everything profiled for Resilinc is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/resilinc/](https://apis.io/providers/resilinc/)** — or go straight to one of the APIs or properties below.
 
-## APIs
+### APIs (1)
 
-### Resilinc API
+- [Resilinc API](https://apis.io/apis/resilinc/resilinc/) — The Resilinc REST API provides programmatic access to supply chain risk data including supplier information, disruption events, risk assessments, and…
 
-The Resilinc REST API provides programmatic access to supply chain risk data including supplier information, disruption events, risk assessments, and mitigation planning data. Enables integration with ERP systems, analytics platforms (Snowflake), and custom applications.
+### Published properties
 
-- **Human URL:** [https://resilinc.ai/solutions/developer-api/](https://resilinc.ai/solutions/developer-api/)
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-#### Properties
+#### JSON Schema (2)
 
-- [Documentation](https://resilinc.ai/solutions/developer-api/)
-- [About](https://resilinc.ai/about/)
-- [JSONSchema - Supplier](json-schema/resilinc-supplier-schema.json)
-- [JSONSchema - Disruption Event](json-schema/resilinc-disruption-event-schema.json)
-- [JSONStructure - Supplier](json-structure/resilinc-supplier-structure.json)
-- [JSONLDContext](json-ld/resilinc-context.jsonld)
-- [Vocabulary](vocabulary/resilinc-vocabulary.yml)
+The data models the API reads and writes.
 
-## Common Properties
+- [Resilinc Disruption Event](https://apis.io/schemas/resilinc/resilinc-disruption-event/)
+- [Resilinc Supplier](https://apis.io/schemas/resilinc/resilinc-supplier/)
+
+#### JSON Structure (1)
+
+Data models expressed in JSON Structure.
+
+- [Resilinc Supplier Structure](https://apis.io/json-structure/resilinc/resilinc-supplier-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Resilinc Context](https://apis.io/jsonld/resilinc/resilinc-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Resilinc Vocabulary](https://apis.io/vocabularies/resilinc/resilinc-vocabulary/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Resilinc Disruption Event Example](https://apis.io/examples/resilinc/resilinc-disruption-event-example/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Resilinc — jsonschema rules](https://apis.io/rules/resilinc/resilinc-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Resilinc Domain Security](https://apis.io/security/resilinc/resilinc-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Resilinc Plans Pricing](https://apis.io/plans/resilinc/resilinc-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Resilinc Rate Limits](https://apis.io/rate-limits/resilinc/resilinc-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Resilinc Finops](https://apis.io/finops/resilinc/resilinc-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://resilinc.ai/)
-- [Products](https://resilinc.ai/products/agentic-supply-chain-risk-management/)
-- [Supply Chain Risk](https://resilinc.ai/solutions/supply-chain-risk-management/)
-- [Compliance](https://resilinc.ai/solutions/supply-chain-compliance/)
+- [Documentation](https://resilinc.ai/solutions/developer-api/)
 - [Blog](https://resilinc.ai/blog/)
-- [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/resilinc.resilinc_ai)
-- [Parabola Integration](https://parabola.io/parabolas-apis/parabolas-resilinc-api)
+- [Compliance](https://resilinc.ai/solutions/supply-chain-compliance/)
+- [GitHub](https://github.com/resilinc-corp)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 21.7** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 22.7 |
+| Contract governance | 23.5 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 15.8 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 14.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/resilinc/](https://apis.io/providers/resilinc/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Resilinc: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/resilinc/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
